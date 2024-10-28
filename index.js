@@ -12,7 +12,7 @@ async function getWelcomeMessage() {
   try {
     const rc = getRemoteConfig();
     const template = await rc.getTemplate(); 
-    const welcomeMessage = template.parameters?.welcome_message?.defaultValue?.value || "Default Welcome Message";
+    const welcomeMessage = template.parameters?.welcome_message?.defaultValue?.value || "Default Welcome Message"; //defaultValue is an example to get message. You can get some values with; .conditionalValues.YOUR_CONDITION_NAME.value
     return welcomeMessage;
   } catch (error) {
     return "Error fetching welcome message" + error;
